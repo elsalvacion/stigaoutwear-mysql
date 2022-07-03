@@ -89,7 +89,7 @@ const CategoryCarousel = (props) => {
     <ProductCarouselShimmer />
   ) : error ? (
     <CustomAlert message={error} type="error" />
-  ) : products.length === 0 ? null : (
+  ) : products.length === 0 ? null : products.length < 7 ? null : (
     <>
       <br />
       <br />
