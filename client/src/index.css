@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #f3f3f3;
+  overflow-x: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.whatsappBtn {
+  position: fixed;
+  z-index: 15000;
+  bottom: 200px;
+  right: 150px;
+}
+
+.searchResultContainer {
+  display: none;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  min-height: calc(100vh - 50px);
+  max-height: calc(100vh - 50px);
+  background: rgba(0, 0, 0, 0.7);
+  transition: all 0.7s;
+}
+
+.searchResultContainer.show {
+  display: block;
+}
+
+.searchOutput {
+  max-height: 65vh;
+  width: 600px;
+  margin: 0 auto;
+  background: white;
+  overflow-y: auto;
+  overflow-x: none;
+}
+
+@media (max-width: 768px) {
+  .searchOutput {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .searchOutput {
+    width: 95%;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
